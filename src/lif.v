@@ -11,6 +11,7 @@ module lif {
     reg [0:7] threshold;
 
     always @(posedge clk) begin
+        
         if (!reset_n) begin
             state <= 0;
             threshold <= 200;
