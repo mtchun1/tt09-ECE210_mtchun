@@ -1,4 +1,4 @@
-default_nettype none
+`default_nettype none
 
 module lif {
     input wire [0:7]    current,
