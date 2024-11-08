@@ -23,6 +23,6 @@ module tt_um_mmf_mtchun (
   // List all unused inputs to prevent warnings
   wire _unused = &{ena, uio_in, 1'b0};
 
-  mmf mmf1 (.current(ui_in), .clk(clk), .reset_n(rst_n), .state(uo_out));
+  mmf mmf1 (.x_input(ui_in), .clk(clk), .reset_n(rst_n), .state(uo_out));
 
 endmodule

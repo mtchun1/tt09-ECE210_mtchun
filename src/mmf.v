@@ -1,13 +1,13 @@
 `default_nettype none
 
 module mmf (
-    input wire [0:7]    current,
+    input wire [7:0]    x_input,
     input wire          clk,
     input wire          reset_n,
-    output reg [0:7]    state
+    output reg [7:0]    state
 );
-    wire [0:7] next_state;
-    reg [0:7] w;
+    wire [7:0] next_state;
+    reg [15:0] w;
 
     always @(posedge clk) begin
 
@@ -21,6 +21,6 @@ module mmf (
     end
 
     // next state logic
-    assign next_state = w * current;
+    assign next_state = w * x_input;
 
 endmodule
