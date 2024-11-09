@@ -17,10 +17,10 @@ async def test_project(dut):
     await ClockCycles(dut.clk, 10)
     dut.rst_n.value = 1
 
-    dut.ui_in.value = 0
+    dut.ui_in.value = 0x00
     await ClockCycles(dut.clk, 10)
 
-    dut.ui_in.value = 20
+    dut.ui_in.value = 0x11
     await ClockCycles(dut.clk, 100)
 
     dut.log.info("Finished Test")
