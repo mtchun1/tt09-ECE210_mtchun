@@ -22,26 +22,16 @@ async def test_project(dut):
     await ClockCycles(dut.clk, 10)
 
     # NAND Gate Tests
-    # dut.ui_in.value = 0x00
-    # await ClockCycles(dut.clk, 30)
-    # assert dut.uio_out.value == 128
+    dut.ui_in.value = 0b11011011
+    await ClockCycles(dut.clk, 30)
 
-    # dut.ui_in.value = 0x01
-    # await ClockCycles(dut.clk, 30)
-    # assert dut.uio_out.value == 128
+    dut.ui_in.value = 0b11011001
+    await ClockCycles(dut.clk, 30)
 
-    # dut.ui_in.value = 0x10
-    # await ClockCycles(dut.clk, 30)
-    # assert dut.uio_out.value == 128
+    dut.ui_in.value = 0b11011010
+    await ClockCycles(dut.clk, 30)
 
-    # dut.ui_in.value = 0x11
-    # await ClockCycles(dut.clk, 30)
-    # assert dut.uio_out.value == 0
-
-    dut.ui_in.value = 0b00000011
-    dut.uio_in.value = 0b00000011
-    await ClockCycles(dut.clk, 100)
-    dut.ui_in.value = 0b00000000
-    await ClockCycles(dut.clk, 100)
+    dut.ui_in.value = 0b11011000
+    await ClockCycles(dut.clk, 30)
 
     dut.log.info("Finished Test")
