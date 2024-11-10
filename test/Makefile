@@ -5,7 +5,7 @@
 SIM ?= icarus
 TOPLEVEL_LANG ?= verilog
 SRC_DIR = $(PWD)/../src
-PROJECT_SOURCES = tt_um_perceptron_mtchun.v perceptron.v
+PROJECT_SOURCES = tt_um_perceptron_8bfulladder_mtchun.v perceptron.v full_adder.v
 
 ifneq ($(GATES),yes)
 

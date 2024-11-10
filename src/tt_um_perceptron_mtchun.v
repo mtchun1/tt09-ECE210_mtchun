@@ -23,8 +23,6 @@ module tt_um_perceptron_mtchun (
   // List all unused inputs to prevent warnings
   wire _unused = &{ena, uio_in, 1'b0};
 
-//   wire v_in1[3:0] = ui_in[3:0];
-//   wire v_in2[3:0] = ui_in[7:4];
   // Instantiate neuron
   perceptron perceptron1 (.v_in1(ui_in[3:0]), .v_in2(ui_in[7:4]), .clk(clk), .reset_n(rst_n), .state(uo_out), .v_out(uio_out[7]));
 
