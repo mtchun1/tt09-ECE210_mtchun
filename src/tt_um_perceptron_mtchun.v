@@ -17,7 +17,7 @@ module tt_um_perceptron_mtchun (
 );
 
   // All output pins must be assigned. If not used, assign to 0.
-  assign uio_out[4:0] = 0;
+  assign uio_out[6:0] = 0;
   assign uio_oe = 8'b10000000;
 
   // List all unused inputs to prevent warnings
@@ -27,6 +27,6 @@ module tt_um_perceptron_mtchun (
   wire [2:0] w2 = ui_in[7:5];
 
   // Instantiate neuron
-  perceptron perceptron1 (.v_in1(ui_in[0]), .v_in2(ui_in[1]), .w1_in(w1), .w2_in(w2), .clk(clk), .reset_n(rst_n), .state(uo_out), .v_out(uio_out[7]));
+  perceptron perceptron1 (.v_in1(ui_in[0]), .v_in2(ui_in[1]), .w1_in(w1), .w2_in(w2), .clk(clk), .reset_n(rst_n), .state(uo_out[3:0]), .v_out(uio_out[7]));
 
 endmodule
