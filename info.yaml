@@ -3,7 +3,7 @@ project:
   title:        "Perceptron Neuron"      # Project title
   author:       "Michael Chun"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "Makes a NAND gate with a perceptron neuron"      # One line description of what your project does
+  description:  "Makes a NAND gate with a perceptron neuron, can input your own weights. Does not work like an NAND gate for all weights"      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
 
